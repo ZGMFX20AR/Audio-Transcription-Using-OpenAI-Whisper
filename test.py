@@ -40,7 +40,7 @@ def record_audio(filename, duration, sample_rate):
     print(f"Recording saved as {filename}")
 
 # Initialize Whisper model
-model = whisper.load_model("base")
+model = whisper.load_model("base").to("cuda" if torch.cuda.is_available() else "cpu")
 
 # Function to save transcription with timestamps
 def save_transcription_with_timestamps(transcription, output_file="transcription.txt"):
