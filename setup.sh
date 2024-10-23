@@ -17,9 +17,10 @@ source whisper_venv/bin/activate
 echo "Installing PyTorch and relevant libraries..."
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
-# Optional: If PyTorch wheel is downloaded manually from NVIDIAs site, install it
+# Optional: Uncomment this section if you are using another version of Jetpack, download PyTorch wheel from NVIDIAs site, install it (https://developer.nvidia.com/embedded/downloads#?search=pytorch)
 # echo "Installing manually downloaded PyTorch wheel (optional)..."
-# pip install torch-2.1.0a0+41361538.nv23.06-cp38-cp38-linux_aarch64.whl
+# Example pip install >name of the wheel file<.whl
+# pip install torch-2.5.0a0+872d972e41.nv24.08.17622132-cp310-cp310-linux_aarch64.whl
 
 # Step 5: Install Whisper and other Python dependencies
 echo "Installing Whisper and other Python packages..."
